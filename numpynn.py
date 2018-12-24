@@ -14,11 +14,11 @@ Xtrain=X.T
 Ytrain=Y.T
 
 
-inplayer=Xtrain.shape[0] ## 784
+inlayer=Xtrain.shape[0] ## 784
 h1layer=256
 h2layer=32
 labels=Ytrain.shape[0] ## 10
-W=np.random.normal(0.0,1.3,size=(inplayer,h1layer))
+W=np.random.normal(0.0,1.3,size=(inlayer,h1layer))
 W1=np.random.normal(0.0,2.3,size=(h1layer,h2layer))
 W2=np.random.normal(0.0,1.9,size=(h2layer,labels))
 
@@ -57,7 +57,7 @@ for e in range(epochs):
         W=-(lr/batch)*(dW)
         
         i=end
-    print('epoch{}--loss= {}'.format(e,tot_loss))
+    print('epoch{}--loss= {}'.format(e+1,tot_loss))
      
         
         
